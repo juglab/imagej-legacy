@@ -105,6 +105,11 @@
 			<url>http://imagej.net/User:Bnorthan</url>
 			<properties><id>bnorthan</id></properties>
 		</contributor>
+		<contributor>
+			<name>Robert Haase</name>
+			<url>http://imagej.net/User:haesleinhuepf</url>
+			<properties><id>haesleinhuepf</id></properties>
+		</contributor>
 	</contributors>
 
 	<mailingLists>
@@ -146,6 +151,7 @@ Institute of Molecular Cell Biology and Genetics.</license.copyrightOwners>
 		<jmh.version>1.19</jmh.version>
 		<jmh-core.version>${jmh.version}</jmh-core.version>
 		<jmh-generator-annprocess.version>${jmh.version}</jmh-generator-annprocess.version>
+		<imagej.app.directory>C:\programs\fiji-win64\Fiji.app</imagej.app.directory>
 	</properties>
 
 	<repositories>
@@ -170,6 +176,10 @@ Institute of Molecular Cell Biology and Genetics.</license.copyrightOwners>
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>net.imagej</groupId>
