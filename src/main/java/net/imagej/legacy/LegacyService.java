@@ -31,17 +31,6 @@
 
 package net.imagej.legacy;
 
-import java.awt.GraphicsEnvironment;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.concurrent.Future;
-
 import net.imagej.DatasetService;
 import net.imagej.ImageJService;
 import net.imagej.display.ImageDisplay;
@@ -52,7 +41,6 @@ import net.imagej.legacy.ui.LegacyUI;
 import net.imagej.patcher.LegacyEnvironment;
 import net.imagej.patcher.LegacyInjector;
 import net.imagej.ui.viewer.image.ImageDisplayViewer;
-
 import org.scijava.Identifiable;
 import org.scijava.MenuPath;
 import org.scijava.Priority;
@@ -88,6 +76,17 @@ import org.scijava.ui.UserInterface;
 import org.scijava.ui.swing.script.TextEditor;
 import org.scijava.ui.viewer.DisplayWindow;
 import org.scijava.util.AppUtils;
+
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.concurrent.Future;
 
 /**
  * Service for working with legacy ImageJ 1.x.
@@ -470,6 +469,7 @@ public final class LegacyService extends AbstractService implements
 		ij1Helper.addAliases(scriptService);
 
 		SwitchToModernMode.registerMenuItem();
+		SortHelpMenu.sortWebLinks();
 
 		// NB: We cannot call appService.getApp().getBaseDirectory(), because
 		// that prevents the net.imagej.app.ToplevelImageJApp from getting its
